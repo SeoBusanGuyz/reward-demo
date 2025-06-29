@@ -21,6 +21,12 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+
+	// JPA 사용을 위한 Spring Data JPA 스타터
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+
+	// MySQL 커넥터 (런타임 시점 필요)
+	runtimeOnly 'com.mysql:mysql-connector-j'
 }
 
 tasks.named('test') {
