@@ -27,6 +27,11 @@ public class Visit {
         this.timestamp = timestamp;
     }
 
+    // **추가**: 편의 생성자
+    public Visit(double latitude, double longitude) {
+        this(latitude, longitude, LocalDateTime.now());
+    }
+
     // -- getters / setters --
     public Long getId() { return id; }
 
