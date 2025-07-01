@@ -27,6 +27,9 @@ dependencies {
 
 	// MySQL 커넥터 (런타임 시점 필요)
 	runtimeOnly 'com.mysql:mysql-connector-j'
+
+	implementation 'org.springdoc:springdoc-openapi-starter-webmvc-ui:2.8.9'
+
 }
 
 tasks.named('test') {

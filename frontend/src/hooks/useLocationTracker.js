@@ -1,8 +1,9 @@
 // src/hooks/useLocationTracker.js
+
 import { useState, useEffect, useRef } from 'react';
 import { haversine } from '../utils/haversine';
 
-export function useLocationTracker(initialPos, onVisit, onReset) {
+function useLocationTracker(initialPos, onVisit, onReset) {
   const [currentPos, setCurrentPos] = useState(
     initialPos ? [initialPos.lat, initialPos.lng] : null
   );
@@ -52,3 +53,5 @@ const VISIT_TRIGGER_COUNT = 3;
 
   return { currentPos };
 }
+
+export default useLocationTracker;

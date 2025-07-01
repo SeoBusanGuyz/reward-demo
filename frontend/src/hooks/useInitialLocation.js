@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 
-export function useInitialLocation() {
+function useInitialLocation() {
   const [initialPos, setInitialPos] = useState(() => {
     const saved = localStorage.getItem('initialPos');
     return saved ? JSON.parse(saved) : null;
@@ -31,5 +31,7 @@ export function useInitialLocation() {
     );
   }, [initialPos]);
 
-  return { initialPos, error };
+  return { initialPos, error, setInitialPos };
 }
+
+export default useInitialLocation;
